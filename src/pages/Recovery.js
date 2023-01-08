@@ -5,8 +5,8 @@ import { generateOTP, verifyOTP } from '../helper/helper';
 import { useAuthStore } from '../store/store'
 
 import logo from '../assets/images/logo.png';
-import video1 from '../assets/videos/play4.mp4';
-import video2 from '../assets/videos/play4.webm';
+import video1 from '../assets/videos/play44.mp4';
+import video2 from '../assets/videos/play44.webm';
 import bg from '../assets/images/bg.jpg';
 import google from '../assets/images/google.svg';
 
@@ -82,6 +82,14 @@ export default function Recovery() {
                             <img src={logo} className="w-40" alt="konkonso logo" />
                         </a>
                         <p className="font-medium text-lg text-gray-600">Enter OTP to recover password.</p>
+                    </div>
+
+                    <div className="md:hidden shadow-2xl shadow-blue mt-5">
+                        <span className="absolute left-6 bottom-6 text-sm">Video services by BlaBla LTD </span>
+                        <video ref={videoRef} loop muted autoPlay className="w-full h-full object-cover" poster={bg}>
+                            <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                            <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        </video>
                     </div>
 
                     <div className="mt-12 grid gap-6 sm:grid-cols-2">

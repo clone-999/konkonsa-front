@@ -10,8 +10,8 @@ import { registerUser } from '../helper/helper'
 import styles from '../styles/Username.module.css';
 
 import logo from '../assets/images/logo.png';
-import video1 from '../assets/videos/play3.mp4';
-import video2 from '../assets/videos/play3.webm';
+import video1 from '../assets/videos/play33.mp4';
+import video2 from '../assets/videos/play33.webm';
 import bg from '../assets/images/bg.jpg';
 import google from '../assets/images/google.svg';
 
@@ -77,7 +77,15 @@ const Register = () => {
                         <p className="font-medium text-lg text-gray-600">Welcome to konkonso ! Register here</p>
                     </div>
 
-                    <div className='profile flex justify-center py-4'>
+                    <div className="md:hidden shadow-2xl shadow-blue mt-5">
+                        <span className="absolute left-6 bottom-6 text-sm">Video services by BlaBla LTD </span>
+                        <video ref={videoRef} loop muted autoPlay className="w-full h-full object-cover" poster={bg}>
+                            <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                            <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        </video>
+                    </div>
+
+                    <div hidden className='profile md:flex justify-center py-4'>
                         <label htmlFor="profile">
                             <img src={file || avatar} className={styles.profile_img} alt="avatar" />
                         </label>

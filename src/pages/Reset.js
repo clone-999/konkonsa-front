@@ -64,6 +64,14 @@ const Reset = () => {
 
                     <Toaster position='top-center' reverseOrder={false}></Toaster>
 
+                    <div className="md:hidden shadow-2xl shadow-blue mt-5">
+                        <span className="absolute left-6 bottom-6 text-sm">Video services by BlaBla LTD </span>
+                        <video ref={videoRef} loop muted autoPlay className="w-full h-full object-cover" poster={bg}>
+                            <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                            <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        </video>
+                    </div>
+
                     <div className="space-y-4">
                         <a href="">
                             <img src={logo} className="w-40" alt="konkonso logo" />

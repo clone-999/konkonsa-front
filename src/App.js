@@ -13,17 +13,17 @@ import Reset from './pages/Reset';
 import PageNotFound from './pages/PageNotFound';
 
 /** auth middleware */
-import { AuthorizeUser, ProtectRoute } from './middleware/auth'
+import { AuthorizeUser, ProtectRoute, RedirectRoute } from './middleware/auth'
 
 /** root routes */
 const router = createBrowserRouter([
   {
     path : '/',
-    element : <Username></Username>
+    element : <RedirectRoute><Username></Username></RedirectRoute>
   },
   {
     path : '/register',
-    element : <Register></Register>
+    element : <RedirectRoute><Register></Register></RedirectRoute>
   },
   {
     path : '/password',
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path : '/recovery',
-    element : <Recovery></Recovery>
+    element : <RedirectRoute><Recovery></Recovery></RedirectRoute>
   },
   {
     path : '/profile',
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
   },
   {
     path : '/reset',
-    element : <Reset></Reset>
+    element : <RedirectRoute><Reset></Reset></RedirectRoute>
   },
   {
     path : '*',

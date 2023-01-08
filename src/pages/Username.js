@@ -41,8 +41,8 @@ export default function Username() {
             <div hidden className="fixed inset-0 w-7/12 lg:block">
                 <span className="absolute left-6 bottom-6 text-sm">Video services by BlaBla LTD </span>
                 <video ref={videoRef} loop muted autoPlay className="w-full h-full object-cover" poster={bg}>
-                <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
             </div>
             <div hidden role="hidden" className="fixed inset-0 w-6/12 ml-auto bg-white bg-opacity-70 backdrop-blur-xl lg:block"></div>
@@ -59,7 +59,15 @@ export default function Username() {
                         <p className="font-medium text-lg text-gray-600">Welcome to konkonso ! Login first</p>
                     </div>
 
-                    <div className='profile flex justify-center py-4'>
+                    <div className="md:hidden shadow-2xl shadow-blue mt-5">
+                        <span className="absolute left-6 bottom-6 text-sm">Video services by BlaBla LTD </span>
+                        <video ref={videoRef} loop muted autoPlay className="w-full h-full object-cover" poster={bg}>
+                            <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                            <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        </video>
+                    </div>
+                    
+                    <div hidden className='profile md:flex justify-center py-4'>
                         <img src={avatar} className={styles.profile_img} alt="avatar" />
                     </div>
 

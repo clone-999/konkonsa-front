@@ -70,7 +70,15 @@ const Password = () => {
                     <p className="font-medium text-lg text-gray-600">Enter password to continue</p>
                 </div>
 
-                <div className='profile flex justify-center py-4'>
+                <div className="md:hidden shadow-2xl shadow-blue mt-5">
+                    <span className="absolute left-6 bottom-6 text-sm">Video services by BlaBla LTD </span>
+                    <video ref={videoRef} loop muted autoPlay className="w-full h-full object-cover" poster={bg}>
+                        <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    </video>
+                </div>
+
+                <div hidden className='profile md:flex justify-center py-4'>
                     <img src={apiData?.profile || avatar} className={styles.profile_img} alt="avatar" />
                 </div>
 
