@@ -60,7 +60,7 @@ const Register = () => {
                 <span className="absolute left-6 bottom-6 text-sm">Video services by BlaBla LTD </span>
                 <video ref={videoRef} loop muted autoPlay className="w-full h-full object-cover" poster={bg}>
                 <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src={ video2 } type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
             </div>
             <div hidden role="hidden" className="fixed inset-0 w-6/12 ml-auto bg-white bg-opacity-70 backdrop-blur-xl lg:block"></div>
@@ -80,7 +80,7 @@ const Register = () => {
                     <div className="md:hidden shadow-2xl shadow-blue mt-5">
                         <video ref={videoRef} loop muted autoPlay className="w-full h-full object-cover" poster={bg}>
                             <source src= { video1 } type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                            <source src={ video2 } type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                            <source src={ video2 } type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                         </video>
                     </div>
 
